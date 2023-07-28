@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.top {
+    background-color:cadetblue;
+    color: #fff;
+}
+
+.container, .nav {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
