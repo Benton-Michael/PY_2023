@@ -48,11 +48,11 @@ new_students = [
 ]
 
 def iterate_dictionary(some_list):
-    for i in range(0, len(some_list)):
+    for i in range(0, len(some_list)): # This is the outer loop
         output = ""
-        for key, val in some_list[i].items():
+        for key, val in some_list[i].items(): # Inner loop iterates k,v pairs, returned as tuples
             output += f" {key} - {val},"
-        print(output)
+        print(output) # this str now contains all k,v pairs
     
 iterate_dictionary(new_students)
 
