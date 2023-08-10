@@ -24,7 +24,7 @@ class BankAccount:
         self.balance = balance
         BankAccount.accounts.append(self)
 
-    def despoit(self, amount):
+    def deposit(self, amount):
         self.balance =+ amount
         print(f'Desposit: {amount} New Balance: {self.balance}')
         return self
@@ -38,4 +38,25 @@ class BankAccount:
         else:
             self.balance -= amount
             print(f'Withdrawl: $ {amount} Your New Balance is: {self.balance}')
-            return self
+        return self
+    
+    def display_account_info(self):
+        print(f'Balance: {self.balance}')
+        return self
+    
+    def yeild_interest(self):
+        if self.balance > 0:
+            self.balance += (self.balance * self.int_rate)
+        return self
+
+    @classmethod
+    def print_all_accounts(cls):
+        for account in cls.accounts:
+            account.display_account_info()
+
+michael_savings = BankAccount(.05, 1000)
+michael_checking = BankAccount(.02, 500)
+
+michael_savings.deposit(20).deposit(100).yeild_interest()
+
+BankAccount.print_all_accounts()
